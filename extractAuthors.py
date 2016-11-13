@@ -128,9 +128,11 @@ if __name__ == '__main__':
             if records:
                 printRecords(records)
                 scholar[a] = records
-                time.sleep(random.randint(15,60))
+                
                 with open('scholar.json', 'w') as f:
                     json.dump(scholar,f)
+
+                time.sleep(random.randint(15,60))
                 break
             else:
                 msg = '%s\t Going to sleep (%s)\n' % (time.ctime(), a)
