@@ -52,7 +52,7 @@ def askScholar(author):
             }
     
     url = URL + "?" + urlencode(query).encode('ascii')
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers, verify=False)
     return response
 
 
