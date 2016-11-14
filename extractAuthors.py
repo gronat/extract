@@ -125,14 +125,14 @@ if __name__ == '__main__':
             continue
         for _ in range(200):
             records = findRecords(a)
-            if records:
+            if records is not None:
                 printRecords(records)
                 scholar[a] = records
                 
                 with open('scholar.json', 'w') as f:
                     json.dump(scholar,f)
 
-                time.sleep(random.randint(15,60))
+                time.sleep(random.randint(60, 500))
                 break
             else:
                 msg = '%s\t Going to sleep (%s)\n' % (time.ctime(), a)
