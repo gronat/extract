@@ -7,7 +7,7 @@ import re
 import time
 import random
 import json
-
+import random
 
 def findAuthors(text):
     pattern = '([A-Z]\S+,(?: [A-Z]\.){1,3})'
@@ -102,7 +102,7 @@ if __name__ == '__main__':
     
     authors_list = extractAuthors(lines)
     authors = poolAuthors(authors_list)
-
+    random.shuffle(authors)
     # author = [
     #     'Obozinski, G.',
     #     'Li, P.',
