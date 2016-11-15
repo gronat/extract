@@ -132,7 +132,7 @@ if __name__ == '__main__':
                 with open('scholar.json', 'w') as f:
                     json.dump(scholar,f)
 
-                time.sleep(random.randint(60, 500))
+                time.sleep(random.randint(30, 240))
                 break
             else:
                 msg = '%s\t Going to sleep (%s)\n' % (time.ctime(), a)
